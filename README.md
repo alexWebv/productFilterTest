@@ -16,6 +16,9 @@ I used the standard Angulra design template
 * services
 * shared
 
+## First Running
+
+Please use in root folder `npm install`. If you will have problem with peer dependence please use force or install with peer deps. Then please use `ng serve`
 
 ## Development server
 
