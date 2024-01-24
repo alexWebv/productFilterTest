@@ -1,0 +1,10 @@
+<div class="form row">
+  <h1>Filters</h1>
+  <div class="col-3" *ngFor="let item of filtersObjectArray">
+    <label>{{item.name}}</label>
+    <div class="switch" [ngSwitch]="item.type">
+      <input class="form-control" name="{{item.field}}" *ngSwitchCase="'text'" (keyup)="change($event)" type="text">
+      <input class="form-control" *ngSwitchCase="'number'" name="{{item.field}}" (keyup)="change($event)" type="number">
+    </div>
+  </div>
+</div>

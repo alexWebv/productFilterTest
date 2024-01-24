@@ -1,0 +1,32 @@
+<div class="container mt-4" *ngIf="showArray.length > 0">
+  <h1>Table</h1>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col"  *ngFor="let item of headers">{{item}}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let tableItem of showArray; let i = index">
+      <th scope="row">{{ tableItem.id }}</th>
+      <td>{{ tableItem.name }}</td>
+      <td>{{ tableItem.category }}</td>
+      <td>{{ tableItem.price }}</td>
+      <td>{{ tableItem.count }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div class="d-flex justify-content-between p-2">
+    <ngb-pagination
+      [collectionSize]="arrayValues.length"
+      [(page)]="page"
+      [maxSize]="3" [rotate]="true" [boundaryLinks]="true"
+      [pageSize]="pageSize"
+      (pageChange)="refreshPagination()"
+    >
+    </ngb-pagination>
+  </div>
+
+</div>

@@ -1,0 +1,4 @@
+<div class="container" *ngIf="products.length > 0">
+  <app-filter-inputs [filtersObjectArray]="filtersObject" (onChanged)="filterData($event)"></app-filter-inputs>
+  <app-table [headers]="headers" [arrayValues]="showProducts()"></app-table>
+</div>

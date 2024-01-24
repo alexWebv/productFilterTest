@@ -2,6 +2,21 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1.
 
+## Mode
+
+Project have 2 mode how can work. The first opportunity is with a date created from the tempSetUp function, which is located in the dashboard component. The second opportunity is to connect your [FIREBASE]("https://console.firebase.google.com/") store. Unfortunately, I used the free version. So I can use it personally, but it’s a good example of setting up the API
+
+## Structure
+
+I used the standard Angulra design template
+
+* constants folder
+* dashboard module
+* models
+* services
+* shared
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
